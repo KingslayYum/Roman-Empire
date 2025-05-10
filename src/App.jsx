@@ -2,7 +2,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { About, Art, Blog, Contact, Exhibition, Fashion, Hero, History, Influence, Navbar } from './components';
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
