@@ -1,3 +1,3 @@
-import StatueCanvas from "./Computers";
+import StatueCanvas from './statue';
 
 export { StatueCanvas };
