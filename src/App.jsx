@@ -1,6 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
 
-import { About, Art, Blog, Contact, Exhibition, Fashion, Hero, History, Influence, Loader, Navbar } from './components';
+import { About, Art, Blog, Contact, Exhibition, Fashion, Hero, History, Influence, Navbar } from './components';
 
 function App() {
   return (
@@ -17,8 +17,9 @@ function App() {
         <Fashion />
         <Exhibition />
         <Blog />
-        <Contact />
-        <Loader />
+        <div className='relative z-0 bg-primary'>
+          <Contact />
+        </div>
       </div>
     </BrowserRouter>
   )
