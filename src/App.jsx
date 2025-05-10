@@ -10,6 +10,15 @@ function App() {
           <Navbar />
           <Hero />
         </div>
+        <About />
+        <Influence />
+        <History />
+        <Art />
+        <Fashion />
+        <Exhibition />
+        <Blog />
+        <Contact />
+        <Loader />
       </div>
     </BrowserRouter>
   )
