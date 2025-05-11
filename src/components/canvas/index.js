@@ -1,3 +1,3 @@
-import StatueCanvas from './statue';
+import StatueCanvas from './Statue';
 
 export { StatueCanvas };
