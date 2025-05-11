@@ -16,7 +16,7 @@ const Statue = ({ isMobile }) => {
       object={statue.scene}
       scale={isMobile ? 70 : 70.5}
       position={isMobile ? [0, 0, 0] : [-2, -14.5, -4]}
-      rotation={[0, -5.4, 0.03]}
+      rotation={[0, -5.2, 0.03]}
     />
   );
 };
