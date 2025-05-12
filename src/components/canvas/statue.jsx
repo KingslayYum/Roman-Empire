@@ -26,8 +26,8 @@ const CameraAnimation = () => {
 
   useEffect(() => {
     const radius = 20; // distance from the center
-    const startAngle = 0;
-    const endAngle = -(Math.PI / 4); // full 360° rotation
+    const startAngle = 0.25;
+    const endAngle = -(Math.PI / 4);
 
     const obj = { angle: startAngle };
 
@@ -42,7 +42,7 @@ const CameraAnimation = () => {
       onUpdate: () => {
         const x = radius * Math.cos(obj.angle);
         const z = radius * Math.sin(obj.angle);
-        camera.position.set(x, 5, z); // y=5 for consistent height
+        camera.position.set(x, 3, z);
         camera.lookAt(0, 0, 0); // always face the statue at origin
       },
       ease: 'none',
