@@ -1,6 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
 
 import { About, Art, Blog, Contact, Exhibition, Fashion, Hero, History, Influence, Navbar } from './components';
+import { StatueCanvas } from "./components/canvas";
 
 const App = () => {
   return (
