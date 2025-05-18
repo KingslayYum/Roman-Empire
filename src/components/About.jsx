@@ -78,10 +78,6 @@ const About = () => {
             The empire eventually faced internal strife, economic troubles, and external invasions. It was officially split into the Western and Eastern Roman Empires in 285 CE. While the Western Roman Empire fell in 476 CE, the Eastern Roman Empire, known as the Byzantine Empire, survived for nearly another thousand years until 1453 CE.
           </motion.p>
         </div>
-
-        <div className="bg-red-100 w-[40%] h-[90%] mt-[50px]">
-          <img src={overview} alt="" className="w-[100%]"/>
-        </div>
       </div>
     </>
   )

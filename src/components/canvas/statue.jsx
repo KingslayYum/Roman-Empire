@@ -23,35 +23,50 @@ const Statue = ({ isMobile }) => {
 
 const CameraAnimation = () => {
   const { camera } = useThree();
+  const radius = 20;
+  const startAngle = 0.25;
+  const endAngle = -(Math.PI / 4);
+  const obj = { angle: startAngle };
 
   useEffect(() => {
-    const radius = 20; // distance from the center
-    const startAngle = 0.25;
-    const endAngle = -(Math.PI / 4);
+    const updateCamera = () => {
+      const x = radius * Math.cos(obj.angle);
+      const z = radius * Math.sin(obj.angle);
+      camera.position.set(x, 3, z);
+      camera.lookAt(0, 0, 0);
+    };
 
-    const obj = { angle: startAngle };
+    const scrollTrigger = ScrollTrigger.create({
+      trigger: '#about',
+      start: 'top center',
+      end: 'bottom center',
 
-    gsap.to(obj, {
-      angle: endAngle,
-      scrollTrigger: {
-        trigger: '#scroll-section',
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: true,
+      onEnter: () => {
+        gsap.to(obj, {
+          angle: endAngle,
+          duration: 1.5,
+          ease: 'power2.inOut',
+          onUpdate: updateCamera,
+        });
       },
-      onUpdate: () => {
-        const x = radius * Math.cos(obj.angle);
-        const z = radius * Math.sin(obj.angle);
-        camera.position.set(x, 3, z);
-        camera.lookAt(0, 0, 0); // always face the statue at origin
+
+      onLeaveBack: () => {
+        gsap.to(obj, {
+          angle: startAngle,
+          duration: 1.5,
+          ease: 'power2.inOut',
+          onUpdate: updateCamera,
+        });
       },
-      ease: 'none',
     });
+
+    return () => {
+      scrollTrigger.kill();
+    };
   }, [camera]);
 
   return null;
 };
-
 
 const StatueCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);

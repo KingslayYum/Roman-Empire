@@ -1,5 +1,4 @@
 import { BrowserRouter } from 'react-router-dom';
-
 import { About, Art, Blog, Contact, Exhibition, Fashion, Hero, History, Influence, Navbar } from './components';
 import { StatueCanvas } from "./components/canvas";
 
@@ -7,23 +6,33 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-          <Navbar />
-          <Hero />
+        
+        <div className="fixed top-0 left-0 w-full h-screen z-0">
+          <StatueCanvas />
         </div>
-        <About />
-        <Influence />
-        <History />
-        <Art />
-        <Fashion />
-        <Exhibition />
-        <Blog />
-        <div className='relative z-0 bg-primary'>
-          <Contact />
+
+        <div className="relative z-10">
+          <div className="bg-transparent"> {/* Remove bg-hero-pattern if using 3D as background */}
+            <Navbar />
+            <Hero />
+          </div>
+          <About />
+        </div>
+
+        <div className="relative z-10 bg-primary">
+          <Influence />
+          <History />
+          <Art />
+          <Fashion />
+          <Exhibition />
+          <Blog />
+          <div className='relative z-0 bg-primary'>
+            <Contact />
+          </div>
         </div>
       </div>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default App
+export default App;
