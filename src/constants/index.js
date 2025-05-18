@@ -65,56 +65,16 @@ import {
   
   const technologies = [
     {
-      name: "HTML 5",
-      icon: html,
+      name: "Oil Lamp",
+      icon: "./models/oil_lamp.glb",
     },
     {
-      name: "CSS 3",
-      icon: css,
+      name: "Warrior Helmet",
+      icon: "./models/warrior_helmet.glb",
     },
     {
-      name: "JavaScript",
-      icon: javascript,
-    },
-    {
-      name: "Python",
-      icon: typescript,
-    },
-    {
-      name: "React JS",
-      icon: reactjs,
-    },
-    {
-      name: "C++",
-      icon: redux,
-    },
-    {
-      name: "Tailwind CSS",
-      icon: tailwind,
-    },
-    {
-      name: "Node JS",
-      icon: nodejs,
-    },
-    {
-      name: "C#",
-      icon: mongodb,
-    },
-    {
-      name: "Three JS",
-      icon: threejs,
-    },
-    {
-      name: "git",
-      icon: git,
-    },
-    {
-      name: "figma",
-      icon: figma,
-    },
-    {
-      name: "docker",
-      icon: docker,
+      name: "Vase",
+      icon: "./models/vase.glb",
     },
   ];
   

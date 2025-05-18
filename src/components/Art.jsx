@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 
 import { styles } from '../styles';
 import { fadeIn, textVariant } from '../utils/motion';
-import { BallCanvas } from "./canvas";
 import { technologies } from "../constants";
 import { SectionWrapper } from "../hoc";
+import ModelCanvas from "./canvas"; // update path if needed
 
 const Art = () => {
   return (
@@ -19,9 +19,9 @@ const Art = () => {
       </motion.div>
 
       <div className="flex flex-row flex-wrap justify-center gap-10 mt-20">
-        {technologies.map((technology) => (
-          <div className="w-28 h-28" key={technology.name}>
-            <BallCanvas icon={technology.icon} />
+        {technologies.map((tech) => (
+          <div className="w-28 h-28" key={tech.name}>
+            <ModelCanvas modelPath={tech.modelPath} />
           </div>
         ))}
       </div>
@@ -29,4 +29,4 @@ const Art = () => {
   )
 }
 
-export default SectionWrapper(Art, "")
+export default SectionWrapper(Art, "");
