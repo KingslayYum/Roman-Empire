@@ -4,7 +4,7 @@ import { styles } from '../styles';
 import { fadeIn, textVariant } from '../utils/motion';
 import { technologies } from "../constants";
 import { SectionWrapper } from "../hoc";
-import ModelCanvas from "./canvas"; // update path if needed
+import { ModelCanvas } from "./canvas"; // update path if needed
 
 const Art = () => {
   return (
@@ -20,7 +20,7 @@ const Art = () => {
 
       <div className="flex flex-row flex-wrap justify-center gap-10 mt-20">
         {technologies.map((tech) => (
-          <div className="w-28 h-28" key={tech.name}>
+          <div className="w-28 h-28 bg-black" key={tech.name}>
             <ModelCanvas modelPath={tech.modelPath} />
           </div>
         ))}

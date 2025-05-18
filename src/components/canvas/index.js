@@ -1,4 +1,4 @@
 import StatueCanvas from './Statue';
-import ModelCanvas from "./Ball";
+import ModelCanvas from "./Model";
 
 export { StatueCanvas, ModelCanvas };

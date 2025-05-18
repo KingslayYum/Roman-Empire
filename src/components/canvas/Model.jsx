@@ -5,9 +5,21 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Model = ({ modelPath }) => {
-  const { scene } = useGLTF(modelPath);
-  return <primitive object={scene} scale={2.5} />;
+  try {
+    const { scene } = useGLTF(modelPath);
+    return <primitive object={scene} scale={2.5} />;
+  } catch (error) {
+    console.error(`Model failed to load: ${modelPath}`, error);
+    return (
+      <mesh>
+        <boxGeometry />
+        <meshStandardMaterial color="black" />
+      </mesh>
+    );
+  }
 };
+
+
 
 const ModelCanvas = ({ modelPath }) => {
   return (

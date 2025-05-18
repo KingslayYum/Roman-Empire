@@ -3,18 +3,6 @@ import {
     backend,
     creator,
     web,
-    javascript,
-    typescript,
-    html,
-    css,
-    reactjs,
-    redux,
-    tailwind,
-    nodejs,
-    mongodb,
-    git,
-    figma,
-    docker,
     meta,
     starbucks,
     tesla,
@@ -22,7 +10,6 @@ import {
     carrent,
     jobit,
     tripguide,
-    threejs,
   } from "../assets";
   
   export const navLinks = [
@@ -65,17 +52,50 @@ import {
   
   const technologies = [
     {
-      name: "Oil Lamp",
-      icon: "./models/oil_lamp.glb",
+      name: "Lamp",
+      modelPath: "./models/oil_lamp.glb",
     },
     {
-      name: "Warrior Helmet",
-      icon: "./models/warrior_helmet.glb",
+      name: "Helmet",
+      modelPath: "./models/warrior_helmet.glb",
     },
     {
       name: "Vase",
-      icon: "./models/vase.glb",
+      modelPath: "./models/vase.glb",
     },
+    {
+      name: "Lamp",
+      modelPath: "./models/oil_lamp.glb",
+    },
+    {
+      name: "Helmet",
+      modelPath: "./models/warrior_helmet.glb",
+    },
+    {
+      name: "Vase",
+      modelPath: "./models/vase.glb",
+    },
+    {
+      name: "Lamp",
+      modelPath: "./models/oil_lamp.glb",
+    },
+    {
+      name: "Helmet",
+      modelPath: "./models/warrior_helmet.glb",
+    },
+    {
+      name: "Vase",
+      modelPath: "./models/vase.glb",
+    },
+    {
+      name: "Helmet",
+      modelPath: "./models/warrior_helmet.glb",
+    },
+    {
+      name: "Vase",
+      modelPath: "./models/vase.glb",
+    },
+    
   ];
   
   const experiences = [
