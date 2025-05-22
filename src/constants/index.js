@@ -97,6 +97,45 @@ const technologies = [
   },
 ];
 
+const influences = [
+  {
+    title: "Law & Governance",
+    content:
+      "Roman legal principles, such as codified law and civic duty, form the foundation of many modern legal systems.",
+    icon: "⚖️",
+  },
+  {
+    title: "Architecture & Engineering",
+    content:
+      "The arch, dome, and aqueduct were Roman innovations that transformed the built environment forever.",
+    icon: "🏛",
+  },
+  {
+    title: "Language",
+    content:
+      "Latin, the Roman language, is the root of all Romance languages and influences academic and legal terms globally.",
+    icon: "🗣️",
+  },
+  {
+    title: "Art & Aesthetics",
+    content:
+      "Roman art emphasized realism and grandeur, influencing Renaissance and Neoclassical styles for centuries.",
+    icon: "🎨",
+  },
+  {
+    title: "Fashion & Textiles",
+    content:
+      "Garments like the toga and tunic defined Roman class and status, shaping ceremonial fashion today.",
+    icon: "👘",
+  },
+  {
+    title: "Military Structure",
+    content:
+      "The Roman Legion introduced ranks, formations, and discipline models that inspired modern militaries.",
+    icon: "🛡️",
+  },
+]
+
 const experiences = [
   {
     title: "Founding of Rome",
@@ -398,4 +437,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, influences, experiences, testimonials, projects };
