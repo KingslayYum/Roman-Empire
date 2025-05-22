@@ -21,7 +21,14 @@ const Influence = () => {
 
   return (
     <div className="relative w-full py-16 flex flex-col items-center">
-      <h2 className="text-4xl font-bold mb-10 text-center">Rome’s Enduring Influence</h2>
+      <motion.div 
+        variants={textVariant()}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.3 }}>
+        <p className={styles.sectionSubText}></p>
+        <h2 className={styles.sectionHeadText}>Rome’s Enduring Influence</h2>
+      </motion.div>
 
       {/* Carousel Container */}
       <div className="relative w-full max-w-6xl overflow-hidden px-10 h-[400px]">
