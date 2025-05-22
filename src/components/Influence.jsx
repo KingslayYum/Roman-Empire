@@ -9,7 +9,7 @@ import { influences } from '../constants';
 const Influence = () => {
   const [current, setCurrent] = useState(0)
 
-  const slideWidth = 300 // must match tailwind w-[300px]
+  const slideWidth = 400 // must match tailwind w-[300px]
 
   const prevSlide = () => {
     setCurrent((prev) => (prev === 0 ? influences.length - 1 : prev - 1))
@@ -24,19 +24,19 @@ const Influence = () => {
       <h2 className="text-4xl font-bold mb-10 text-center">Rome’s Enduring Influence</h2>
 
       {/* Carousel Container */}
-      <div className="relative w-full max-w-6xl overflow-hidden px-10">
+      <div className="relative w-full max-w-6xl overflow-hidden px-10 h-[400px]">
         <button
           onClick={prevSlide}
-          className="absolute left-0 top-1/2 -translate-y-1/2 text-4xl font-bold text-gray-400 hover:text-black z-10"
+          className="absolute left-0 top-1/2 -translate-y-1/2 text-4xl font-bold text-gray hover:text-black z-10"
         >
           ‹
         </button>
 
         {/* Slide Track */}
         <div
-          className="flex transition-transform duration-500 ease-in-out"
+          className="flex transition-transform duration-500 ease-in-out mt-[10%]"
           style={{
-            transform: `translateX(calc(50% - ${slideWidth / 2}px - ${current * slideWidth}px))`,
+            transform: `translateX(calc(50% - ${400 / 2}px - ${current * (400+32)}px))`,
           }}
         >
           {influences.map((item, index) => {
@@ -46,12 +46,12 @@ const Influence = () => {
               (current === 0 && index === influences.length - 1) ||
               (current === influences.length - 1 && index === 0)
 
-            const scale = isCurrent ? 'scale-100 opacity-100 z-10' : isAdjacent ? 'scale-90 opacity-60 z-0' : 'scale-75 opacity-0 pointer-events-none'
+            const scale = isCurrent ? 'scale-150 opacity-100 z-10' : isAdjacent ? 'scale-90 opacity-60 z-0' : 'scale-75 opacity-0 pointer-events-none'
 
             return (
               <div
                 key={index}
-                className={`w-[300px] flex-shrink-0 mx-4 transition-all duration-500 ease-in-out transform bg-white rounded-xl shadow-xl p-6 ${scale}`}
+                className={`w-[400px] flex-shrink-0 mx-4 transition-all duration-500 ease-in-out transform bg-gray-300 shadow-xl p-6 ${scale}`}
               >
                 <div className="text-5xl mb-4">{item.icon}</div>
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
@@ -63,7 +63,7 @@ const Influence = () => {
 
         <button
           onClick={nextSlide}
-          className="absolute right-0 top-1/2 -translate-y-1/2 text-4xl font-bold text-gray-400 hover:text-black z-10"
+          className="absolute right-0 top-1/2 -translate-y-1/2 text-4xl font-bold text-gray hover:text-black z-10"
         >
           ›
         </button>
