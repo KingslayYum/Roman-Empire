@@ -21,14 +21,11 @@ const App = () => {
 
         <div className="relative z-10 bg-primary">
           <Influence />
-          <Power />
           <History />
           <Life />
           <Art />
-          <Architecture />
           <Fashion />
           <Exhibition />
-          <Blog />
           <div className='relative z-0 bg-primary'>
             <Contact />
           </div>
