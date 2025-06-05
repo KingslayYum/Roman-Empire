@@ -136,6 +136,28 @@ const influences = [
   },
 ]
 
+const fashion = [
+  {
+    id: 1,
+    title: "Summer Collection",
+    description: "Light and breezy outfits for the warm season",
+    modelPath: "./models/vase.glb",
+  },
+  {
+    id: 2,
+    title: "Autumn Collection",
+    description: "Light and breezy outfits for the warm season",
+    modelPath: "./models/vase.glb",
+  },
+  {
+    id: 3,
+    title: "Winter Collection",
+    description: "Light and breezy outfits for the warm season",
+    modelPath: "./models/vase.glb",
+  },
+  // ... more items
+]
+
 const experiences = [
   {
     title: "Founding of Rome",
@@ -437,4 +459,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, influences, experiences, testimonials, projects };
+export { services, technologies, influences, fashion, experiences, testimonials, projects };
