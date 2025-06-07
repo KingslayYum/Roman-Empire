@@ -139,21 +139,21 @@ const influences = [
 const fashion = [
   {
     id: 1,
-    title: "Summer Collection",
+    title: "Toga",
     description: "Light and breezy outfits for the warm season",
-    modelPath: "./models/vase.glb",
+    modelPath: "./models/toga.glb",
   },
   {
     id: 2,
-    title: "Autumn Collection",
+    title: "Tunic",
     description: "Light and breezy outfits for the warm season",
-    modelPath: "./models/vase.glb",
+    modelPath: "./models/tunic.glb",
   },
   {
     id: 3,
-    title: "Winter Collection",
+    title: "Dalmatica",
     description: "Light and breezy outfits for the warm season",
-    modelPath: "./models/vase.glb",
+    modelPath: "./models/dalmatica.glb",
   },
   // ... more items
 ]
