@@ -102,9 +102,10 @@ const Fashion = () => {
           >
             ›
           </button>
-          <div className="absolute bottom-10 left-20 bg-white/80 text-black p-4 rounded-lg max-w-sm shadow-lg pointer-events-auto h-[30%]">
+          <div className="absolute bottom-10 left-[20%] bg-white/80 text-black p-4 rounded-lg max-w-sm shadow-lg pointer-events-auto h-[30%] w-[16%]">
             <h3 className="text-lg font-semibold mb-1">{fashion[current].title}</h3>
-            <p className="text-sm">{fashion[current].description}</p>
+            <p className="text-sm">Who Wore It : {fashion[current].who}</p><br></br>
+            <p className="text-sm">Description : {fashion[current].description}</p>
           </div>
         </div>
       </div>
