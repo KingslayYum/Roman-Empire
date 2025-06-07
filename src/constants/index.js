@@ -140,20 +140,37 @@ const fashion = [
   {
     id: 1,
     title: "Toga",
-    description: "Light and breezy outfits for the warm season",
+    who: "Roman male citizens (especially statesmen, senators).",
+    description: "A tunic underneath a voluminous wool toga, draped elaborately over the left shoulder and around the body.",
     modelPath: "./models/toga.glb",
   },
   {
     id: 2,
     title: "Tunic",
-    description: "Light and breezy outfits for the warm season",
+    who: "Common Roman citizens",
+    description: "A basic, rectangular garment sewn at the sides, with holes for arms and head. Often paired with a belt (cingulum) to gather the fabric at the waist.",
     modelPath: "./models/tunic.glb",
   },
   {
     id: 3,
     title: "Dalmatica",
-    description: "Light and breezy outfits for the warm season",
+    who: "Late Roman elite men and women.",
+    description: "A richly decorated long tunic with wide sleeves and vertical stripes (clavi).",
     modelPath: "./models/dalmatica.glb",
+  },
+  {
+    id: 4,
+    title: "Lorica",
+    who: "Roman soldiers and officers",
+    description: "Traditional Roman military armor used by legionaries and officers.",
+    modelPath: "./models/lorica.glb",
+  },
+  {
+    id: 5,
+    title: "Stola",
+    who: "Respectable married Roman women.",
+    description: "A full-length, sleeveless dress worn over a tunic, secured by straps at the shoulders. Often worn with a palla (cloak).",
+    modelPath: "./models/stola.glb",
   },
   // ... more items
 ]
