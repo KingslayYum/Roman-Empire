@@ -106,103 +106,63 @@ const CameraRig = () => {
 const exhibitSpots = [
   {
     id: 1,
-    position: [-2.5, 1.2, 5], // left side (x), pillar height (y), forward position (z)
-    modelPath: "./models/oil_lamp.glb",
+    position: [-2.5, 1.2, 10], // left side (x), pillar height (y), forward position (z)
+    modelPath: "./models/gladius.glb",
   },
   {
     id: 2,
-    position: [2.5, 1.2, 5], // right side
-    modelPath: "./models/vase.glb",
+    position: [2.5, 1.2, 10], // right side
+    modelPath: "./models/scutum.glb",
   },
   {
     id: 3,
-    position: [-2.5, 1.2, 10],
-    modelPath: "./models/warrior_helmet.glb",
+    position: [-2.5, 1.2, 15],
+    modelPath: "./models/galea.glb",
   },
   {
     id: 4,
-    position: [2.5, 1.2, 10],
-    modelPath: "./models/tunic.glb",
+    position: [2.5, 1.2, 15],
+    modelPath: "./models/brazier.glb",
   },
   {
     id: 5,
-    position: [-2.5, 1.2, 15], // left side (x), pillar height (y), forward position (z)
-    modelPath: "./models/oil_lamp.glb",
+    position: [-2.5, 1.2, 20], // left side (x), pillar height (y), forward position (z)
+    modelPath: "./models/curule.glb",
   },
   {
     id: 6,
-    position: [2.5, 1.2, 15], // right side
-    modelPath: "./models/vase.glb",
+    position: [2.5, 1.2, 20], // right side
+    modelPath: "./models/pugio.glb",
   },
   {
     id: 7,
-    position: [-2.5, 1.2, 20],
-    modelPath: "./models/warrior_helmet.glb",
+    position: [-2.5, 1.2, 25],
+    modelPath: "./models/strigil.glb",
   },
   {
     id: 8,
-    position: [2.5, 1.2, 20],
-    modelPath: "./models/tunic.glb",
+    position: [2.5, 1.2, 25],
+    modelPath: "./models/mirror.glb",
   },
   {
     id: 9,
-    position: [-2.5, 1.2, 25], // left side (x), pillar height (y), forward position (z)
-    modelPath: "./models/oil_lamp.glb",
+    position: [-2.5, 1.2, 30], // left side (x), pillar height (y), forward position (z)
+    modelPath: "./models/unguentarium.glb",
   },
   {
     id: 10,
-    position: [2.5, 1.2, 25], // right side
-    modelPath: "./models/vase.glb",
+    position: [2.5, 1.2, 30], // right side
+    modelPath: "./models/coin.glb",
   },
   {
     id: 11,
-    position: [-2.5, 1.2, 30], // left side (x), pillar height (y), forward position (z)
-    modelPath: "./models/oil_lamp.glb",
+    position: [-2.5, 1.2, 35], // left side (x), pillar height (y), forward position (z)
+    modelPath: "./models/sundial.glb",
   },
   {
     id: 12,
-    position: [2.5, 1.2, 30], // right side
-    modelPath: "./models/vase.glb",
-  },
-  {
-    id: 13,
-    position: [-2.5, 1.2, 35],
-    modelPath: "./models/warrior_helmet.glb",
-  },
-  {
-    id: 14,
-    position: [2.5, 1.2, 35],
-    modelPath: "./models/tunic.glb",
-  },
-  {
-    id: 15,
-    position: [-2.5, 1.2, 40], // left side (x), pillar height (y), forward position (z)
-    modelPath: "./models/oil_lamp.glb",
-  },
-  {
-    id: 16,
-    position: [2.5, 1.2, 40], // right side
-    modelPath: "./models/vase.glb",
-  },
-  {
-    id: 17,
-    position: [-2.5, 1.2, 45],
-    modelPath: "./models/warrior_helmet.glb",
-  },
-  {
-    id: 18,
-    position: [2.5, 1.2, 45],
-    modelPath: "./models/tunic.glb",
-  },
-  {
-    id: 19,
-    position: [-2.5, 1.2, 50], // left side (x), pillar height (y), forward position (z)
-    modelPath: "./models/oil_lamp.glb",
-  },
-  {
-    id: 20,
-    position: [2.5, 1.2, 50], // right side
-    modelPath: "./models/vase.glb",
+    position: [2.5, 1.2, 35], // right side
+    modelPath: "./models/tablet.glb",
   }
 ];
 
@@ -231,13 +191,11 @@ const Exhibition = () => {
               <CameraRig />
               <Hallway />
               {exhibitSpots.map((spot) => (
-                  <mesh key={spot.id} position={spot.position}>
-                    <Pillar/>
-                  </mesh>
+                <Pillar key={spot.id} position={spot.position}/>
               ))}
-              {/* {exhibitSpots.map((spot) => (
+              {exhibitSpots.map((spot) => (
                 <ExhibitModel key={spot.id} path={spot.modelPath} position={spot.position} />
-              ))} */}
+              ))}
             </ScrollControls>
           </Suspense>
         </Canvas>
