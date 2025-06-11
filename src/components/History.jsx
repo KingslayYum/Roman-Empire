@@ -18,16 +18,7 @@ const ExperienceCard = ({ experience }) => {
       contentStyle={{ background: '#1d1836', color: '#fff' }}
       contentArrowStyle={{ borderRight: '7px solid #232631' }}
       date={experience.date}
-      iconStyle={{ background: experience.iconBg }}
-      icon={
-        <div className="flex justify-center items-center w-full h-full">
-          <img
-            src={experience.icon}
-            alt={experience.company_name}
-            className="w-12 h-12 object-contain"
-          />
-        </div>
-      }
+      iconStyle={{ background: '#232631', color: '#fff' }}
     >
       <motion.div
         ref={ref}
