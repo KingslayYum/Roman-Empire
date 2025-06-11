@@ -99,40 +99,40 @@ const technologies = [
 
 const influences = [
   {
-    title: "Law & Governance",
+    title: "Roman Law and Legal Systems",
     content:
-      "Roman legal principles, such as codified law and civic duty, form the foundation of many modern legal systems.",
+      "The Roman Empire developed one of the most sophisticated legal systems in ancient history, including concepts like innocent until proven guilty, legal contracts, and civil rights. Many modern legal codes — especially in Europe and Latin America — are based on Roman law principles codified in the Corpus Juris Civilis under Emperor Justinian. Even today, legal professionals study Roman law as a foundation for understanding civil procedures and rights.",
     icon: "⚖️",
   },
   {
-    title: "Architecture & Engineering",
+    title: "Architecture and Engineering",
     content:
-      "The arch, dome, and aqueduct were Roman innovations that transformed the built environment forever.",
+      "Roman innovations in architecture and engineering, such as the arch, vault, dome, and concrete, laid the groundwork for modern construction. The use of aqueducts for transporting water and road networks for transportation inspired modern urban planning and infrastructure. Iconic structures like the Colosseum and Pantheon influence modern stadiums, courthouses, and government buildings.",
     icon: "🏛",
   },
   {
-    title: "Language",
+    title: "Language and Writing",
     content:
-      "Latin, the Roman language, is the root of all Romance languages and influences academic and legal terms globally.",
+      "Latin, the language of the Romans, is the root of the Romance languages — including Italian, French, Spanish, Portuguese, and Romanian. Latin also heavily influenced English vocabulary, especially in science, medicine, law, and academia. Additionally, the Roman alphabet (Latin script) remains the most widely used writing system in the world.",
     icon: "🗣️",
   },
   {
-    title: "Art & Aesthetics",
+    title: "Government and Republicanism",
     content:
-      "Roman art emphasized realism and grandeur, influencing Renaissance and Neoclassical styles for centuries.",
+      "Although Rome transitioned into an empire, its earlier Republican model — with a Senate, checks and balances, and elected magistrates — deeply influenced modern democracies. The U.S. Constitution, in particular, draws inspiration from Roman political structure, emphasizing separation of powers, term limits, and civic duty.",
     icon: "🎨",
   },
   {
-    title: "Fashion & Textiles",
+    title: "Urban Planning and Public Services",
     content:
-      "Garments like the toga and tunic defined Roman class and status, shaping ceremonial fashion today.",
+      "Romans were pioneers in city planning, creating grid-based layouts, centralized forums, and public amenities such as baths, theaters, and sewage systems. Their emphasis on public health, sanitation, and organized urban life echoes in the design of contemporary cities and public health infrastructure.",
     icon: "👘",
   },
   {
-    title: "Military Structure",
+    title: "Calendar and Timekeeping",
     content:
-      "The Roman Legion introduced ranks, formations, and discipline models that inspired modern militaries.",
-    icon: "🛡️",
+      "The Julian calendar, introduced by Julius Caesar, is the direct predecessor of the Gregorian calendar we use today. Concepts such as the 365-day year, 12-month cycle, and leap years were Roman contributions. Even the names of the months (e.g., March, July, August) and the idea of structured timekeeping trace back to Rome’s influence.",
+
   },
 ]
 

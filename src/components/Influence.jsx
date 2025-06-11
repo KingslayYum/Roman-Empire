@@ -22,11 +22,11 @@ const Influence = () => {
   return (
     <div className="relative w-full py-16 flex flex-col items-center">
       <motion.div 
-        variants={textVariant()}
+      variants={textVariant()}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.3 }}>
-        <p className={styles.sectionSubText}></p>
+        <p className={styles.sectionSubText}>753 BC - 476 AD</p>
         <h2 className={styles.sectionHeadText}>Rome’s Enduring Influence</h2>
       </motion.div>
 
@@ -58,11 +58,10 @@ const Influence = () => {
             return (
               <div
                 key={index}
-                className={`w-[400px] flex-shrink-0 mx-4 transition-all duration-500 ease-in-out transform bg-gray-300 shadow-xl p-6 ${scale}`}
+                className={`w-[400px] flex-shrink-0 mx-4 transition-all duration-500 ease-in-out transform bg-gray-950 shadow-xl p-6 ${scale}`}
               >
-                <div className="text-5xl mb-4">{item.icon}</div>
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm">{item.content}</p>
+                <p className="sm:text-[12px] text-[8px] text-secondary tracking-wider">{item.content}</p>
               </div>
             )
           })}
