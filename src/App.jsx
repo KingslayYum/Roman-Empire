@@ -23,7 +23,6 @@ const App = () => {
           <Influence />
           <History />
           <ImageMap />
-          <Art />
           <Fashion />
           <Exhibition />
           <div className='relative z-0 bg-primary'>
