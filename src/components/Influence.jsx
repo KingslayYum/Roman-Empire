@@ -78,4 +78,4 @@ const Influence = () => {
   )
 }
 
-export default Influence
+export default SectionWrapper(Influence, "influence")

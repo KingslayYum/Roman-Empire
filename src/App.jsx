@@ -10,10 +10,10 @@ const App = () => {
         <div className="fixed top-0 left-0 w-full h-screen z-0">
           <StatueCanvas />
         </div>
+        <Navbar />
 
         <div className="relative z-10">
           <div className="bg-transparent"> {/* Remove bg-hero-pattern if using 3D as background */}
-            <Navbar />
             <Hero />
           </div>
           <About />

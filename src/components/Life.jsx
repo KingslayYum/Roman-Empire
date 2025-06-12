@@ -127,4 +127,4 @@ const ImageMap = () => {
   );
 };
 
-export default ImageMap;
+export default SectionWrapper(ImageMap, "map")
