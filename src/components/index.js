@@ -7,7 +7,7 @@ import Art from './Art';
 import History from './History';
 import Fashion from './Fashion';
 import Architecture from './Architecture';
-import Life from './Life';
+import ImageMap from './Life';
 import Power from './Power';
 import Influence from './Influence';
 import Exhibition from './Exhibition';
@@ -22,7 +22,7 @@ export {
   History,
   Fashion,
   Architecture,
-  Life,
+  ImageMap,
   Power,
   Influence,
   Exhibition,
