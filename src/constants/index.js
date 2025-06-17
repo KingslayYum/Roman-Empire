@@ -218,6 +218,7 @@ const experiences = [
       "Romulus kills Remus and becomes the first king of Rome",
       "Rome is established as a monarchy",
     ],
+    image: "./history/1.jpg",
   },
   {
     title: "Roman Kingdom Period",
@@ -230,6 +231,7 @@ const experiences = [
       "Early institutions of religion, law, and government formed",
       "Final king Tarquin the Proud is overthrown for tyranny",
     ],
+    image: "./history/2.jpg",
   },
   {
     title: "Establishment of the Roman Republic",
@@ -242,6 +244,7 @@ const experiences = [
       "First Roman laws (The Twelve Tables) established",
       "Expansion begins through conquest and alliances",
     ],
+    image: "./history/3.avif",
   },
   {
     title: "Sack of Rome by the Gauls",
@@ -254,6 +257,7 @@ const experiences = [
       "Rome is captured and partially burned",
       "Romans pay ransom to leave and vow never to be vulnerable again",
     ],
+    image: "./history/4.avif",
   },
   {
     title: "The Punic Wars",
@@ -267,6 +271,7 @@ const experiences = [
       "Second Punic War: Hannibal invades Italy but is defeated",
       "Third Punic War: Carthage is destroyed and annexed",
     ],
+    image: "./history/5.avif",
   },
   {
     title: "Conquests in the East and Gaul",
@@ -279,6 +284,7 @@ const experiences = [
       "Julius Caesar invades and subdues Gaul",
       "Rome becomes dominant power in the Mediterranean",
     ],
+    image: "./history/6.jpg",
   },
   {
     title: "Assassination of Julius Caesar",
@@ -291,6 +297,7 @@ const experiences = [
       "Conspirators, including Brutus and Cassius, assassinate him",
       "Sparks civil war and collapse of the Republic",
     ],
+    image: "./history/7.jpg",
   },
   {
     title: "Rise of Augustus and the Roman Empire",
@@ -303,6 +310,7 @@ const experiences = [
       "Senate grants him imperial powers and the title 'Princeps'",
       "Pax Romana (Peace of Rome) begins, lasting 200 years",
     ],
+    image: "./history/8.jpg",
   },
   {
     title: "Great Fire and Reign of Nero",
@@ -315,6 +323,7 @@ const experiences = [
       "Great Fire of Rome devastates much of the city",
       "Christians blamed and persecuted under Nero",
     ],
+    image: "./history/9.webp",
   },
   {
     title: "Destruction of the Second Temple",
@@ -327,6 +336,7 @@ const experiences = [
       "Second Temple is destroyed by Titus",
       "Marks the beginning of the Jewish diaspora",
     ],
+    image: "./history/10.jpg",
   },
   {
     title: "Peak of Roman Power under Trajan",
@@ -339,6 +349,7 @@ const experiences = [
       "Trajan’s victories in Dacia and the East celebrated with monuments",
       "Rome rules over 60 million people across three continents",
     ],
+    image: "./history/11.jpg",
   },
   {
     title: "Crisis of the Third Century",
@@ -351,6 +362,7 @@ const experiences = [
       "Economic collapse and external invasions",
       "Brief division of empire into Gallic and Palmyrene states",
     ],
+    image: "./history/12.png",
   },
   {
     title: "Diocletian’s Reforms",
@@ -363,6 +375,7 @@ const experiences = [
       "Administrative and military reforms stabilize the empire",
       "Harsh persecutions of Christians under his rule",
     ],
+    image: "./history/13.jpg",
   },
   {
     title: "Constantine and the Rise of Christianity",
@@ -375,6 +388,7 @@ const experiences = [
       "Edict of Milan legalizes Christianity in 313 AD",
       "Constantinople founded as new eastern capital",
     ],
+    image: "./history/14.webp",
   },
   {
     title: "Final Division of the Roman Empire",
@@ -387,6 +401,7 @@ const experiences = [
       "Empire split permanently into Western and Eastern halves",
       "Western capital eventually moves to Ravenna",
     ],
+    image: "./history/15.jpg",
   },
   {
     title: "Sack of Rome by the Visigoths",
@@ -399,6 +414,7 @@ const experiences = [
       "Marks first time Rome had been taken in 800 years",
       "Psychological blow to Roman prestige",
     ],
+    image: "./history/16.avif",
   },
   {
     title: "Fall of the Western Roman Empire",
@@ -411,6 +427,7 @@ const experiences = [
       "No new Western emperor is appointed",
       "Eastern Roman (Byzantine) Empire continues in the East",
     ],
+    image: "./history/17.avif",
   },
 ];
 
