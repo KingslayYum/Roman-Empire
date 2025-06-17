@@ -13,7 +13,7 @@ import Influence from './Influence';
 import Exhibition from './Exhibition';
 import Blog from './Blog';
 import Contact from './Contact';
-import Colosseum from './canvas/Colosseum';
+import ColosseumCanvas from './canvas/Colosseum';
 
 export {
   Hero,
@@ -30,5 +30,5 @@ export {
   Blog,
   Contact,
   StatueCanvas,
-  Colosseum
+  ColosseumCanvas
 }

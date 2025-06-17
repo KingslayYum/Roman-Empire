@@ -1,5 +1,5 @@
 import { BrowserRouter } from 'react-router-dom';
-import { About, Art, Architecture, Blog, Contact, Exhibition, Fashion, ImageMap, Hero, History, Influence, Power, Navbar} from './components';
+import { About, Art, Architecture, Blog, Contact, Exhibition, Fashion, ImageMap, Hero, History, Influence, Power, Navbar, ColosseumCanvas} from './components';
 import { StatueCanvas } from "./components/canvas";
 
 const App = () => {
@@ -32,7 +32,7 @@ const App = () => {
           <Fashion />
           <Exhibition />
           <div className='relative z-0 bg-primary'>
-            <Contact />
+            <ColosseumCanvas />
           </div>
         </div>
       </div>
