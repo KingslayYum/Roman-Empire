@@ -9,13 +9,24 @@ import { SectionWrapper } from '../hoc';
 import { textVariant } from '../utils/motion';
 import { useRef } from 'react';
 
+const getRandomSizeClass = () => {
+  const sizes = ['scale-100', 'scale-105', 'scale-110']; // Normal, Slightly Larger, Larger
+  return sizes[Math.floor(Math.random() * sizes.length)];
+};
+
+const getRandomStyle = () => {
+  const heights = ['200px', '240px', '300px'];
+  return { minHeight: heights[Math.floor(Math.random() * heights.length)] };
+};
+
+
 const ExperienceCard = ({ experience }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { triggerOnce: false, threshold: 0.2 });
 
   return (
     <VerticalTimelineElement
-      contentStyle={{ background: '#1d1836', color: '#fff' }}
+      contentStyle={{ background: '#1d1836', color: '#fff'}}
       contentArrowStyle={{ borderRight: '7px solid #232631' }}
       date={experience.date}
       iconStyle={{ background: '#232631', color: '#fff' }}
@@ -25,6 +36,7 @@ const ExperienceCard = ({ experience }) => {
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
+        className={getRandomSizeClass()}
       >
         <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
         <p className="text-secondary text-[16px] font-semibold" style={{ margin: 0, marginTop: 5 }}>

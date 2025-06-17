@@ -1,81 +1,56 @@
-import React, { useState } from 'react'
-import { motion, useInView } from 'framer-motion';
-import { styles } from '../styles'
-import { textVariant } from '../utils/motion'
-import { SectionWrapper } from '../hoc'
-import { useRef } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { styles } from '../styles';
+import { textVariant } from '../utils/motion';
+import { SectionWrapper } from '../hoc';
 import { influences } from '../constants';
 
 const Influence = () => {
-  const [current, setCurrent] = useState(0)
-
-  const slideWidth = 400 // must match tailwind w-[300px]
-
-  const prevSlide = () => {
-    setCurrent((prev) => (prev === 0 ? influences.length - 1 : prev - 1))
-  }
-
-  const nextSlide = () => {
-    setCurrent((prev) => (prev === influences.length - 1 ? 0 : prev + 1))
-  }
-
   return (
     <div className="relative w-full py-16 flex flex-col items-center">
-      <motion.div 
-      variants={textVariant()}
+      <motion.div
+        variants={textVariant()}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0.3 }}>
+        viewport={{ once: false, amount: 0.3 }}
+      >
         <p className={styles.sectionSubText}>753 BC - 476 AD</p>
         <h2 className={styles.sectionHeadText}>Rome’s Enduring Influence</h2>
       </motion.div>
 
-      {/* Carousel Container */}
-      <div className="relative w-full max-w-6xl overflow-hidden px-10 h-[400px]">
-        <button
-          onClick={prevSlide}
-          className="absolute left-0 top-1/2 -translate-y-1/2 text-4xl font-bold text-gray hover:text-black z-10"
-        >
-          ‹
-        </button>
-
-        {/* Slide Track */}
-        <div
-          className="flex transition-transform duration-500 ease-in-out mt-[10%]"
-          style={{
-            transform: `translateX(calc(50% - ${400 / 2}px - ${current * (400+32)}px))`,
-          }}
-        >
-          {influences.map((item, index) => {
-            const isCurrent = index === current
-            const isAdjacent =
-              index === current - 1 || index === current + 1 ||
-              (current === 0 && index === influences.length - 1) ||
-              (current === influences.length - 1 && index === 0)
-
-            const scale = isCurrent ? 'scale-150 opacity-100 z-10' : isAdjacent ? 'scale-90 opacity-60 z-0' : 'scale-75 opacity-0 pointer-events-none'
-
-            return (
-              <div
-                key={index}
-                className={`w-[400px] flex-shrink-0 mx-4 transition-all duration-500 ease-in-out transform bg-gray-950 shadow-xl p-6 ${scale}`}
-              >
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="sm:text-[12px] text-[8px] text-secondary tracking-wider">{item.content}</p>
-              </div>
-            )
-          })}
+      {/* ✅ New Grid Layout */}
+      <div className="grid grid-cols-2 gap-6 mt-10 max-w-6xl px-10 overflow-hidden">
+        {/* Column 1 */}
+        <div className="flex flex-col gap-6">
+          <div className="group border border-white/40 p-6 shadow-md h-[50%] transition-transform duration-300 ease-in-out transform hover:scale-105 hover:z-10 relative bg-black">
+            <h3 className="text-[200%] font-bold mb-2">{influences[0].title}</h3>
+            <p className="text-sm text-secondary">{influences[0].content}</p>
+          </div>
+          <div className="group border border-white/40 p-6 shadow-md h-[60%] bg-orange-300 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:z-10 relative">
+            <h3 className="text-[200%] font-bold mb-2 text-black">{influences[1].title}</h3>
+            <p className="text-sm text-black mr-[30%]">{influences[1].content}</p>
+          </div>
         </div>
 
-        <button
-          onClick={nextSlide}
-          className="absolute right-0 top-1/2 -translate-y-1/2 text-4xl font-bold text-gray hover:text-black z-10"
-        >
-          ›
-        </button>
+        {/* Column 2 */}
+        <div className="flex flex-col gap-6">
+          <div className="group border border-white/40 p-6 shadow-md transition-transform duration-300 ease-in-out transform hover:scale-105 hover:z-10 relative">
+            <h3 className="text-[200%] font-bold mb-2">{influences[2].title}</h3>
+            <p className="text-sm text-secondary mr-[30%] mb-[10%]">{influences[2].content}</p>
+          </div>
+          <div className="group border border-white/40 p-6 shadow-md transition-transform duration-300 ease-in-out transform hover:scale-105 hover:z-10 relative">
+            <h3 className="text-[200%] font-bold mb-2">{influences[3].title}</h3>
+            <p className="text-sm text-secondary mr-[30%] mb-[10%]">{influences[3].content}</p>
+          </div>
+          <div className="group border border-white/40 p-6 shadow-md transition-transform duration-300 ease-in-out transform hover:scale-105 hover:z-10 relative">
+            <h3 className="text-[200%] font-bold mb-2">{influences[4].title}</h3>
+            <p className="text-sm text-secondary mr-[30%] mb-[10%]">{influences[4].content}</p>
+          </div>
+        </div>
       </div>
-    </div>
-  )
-}
 
-export default SectionWrapper(Influence, "influence")
+    </div>
+  );
+};
+
+export default SectionWrapper(Influence, 'influence');

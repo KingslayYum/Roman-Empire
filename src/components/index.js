@@ -12,7 +12,8 @@ import Power from './Power';
 import Influence from './Influence';
 import Exhibition from './Exhibition';
 import Blog from './Blog';
-import Contact from './Contact'; 
+import Contact from './Contact';
+import Colosseum from './canvas/Colosseum';
 
 export {
   Hero,
@@ -28,5 +29,6 @@ export {
   Exhibition,
   Blog,
   Contact,
-  StatueCanvas
+  StatueCanvas,
+  Colosseum
 }

@@ -1,3 +1,4 @@
+import Tilt from 'react-tilt';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
@@ -81,34 +82,44 @@ const ImageMap = () => {
         <h2 className={styles.sectionHeadText}>THE MAP</h2>
       </motion.div>
 
-      <div
+      <motion.div
         className="relative w-[800px] h-[575px] border-2 border-gray-400"
         onClick={handleClick}
       >
-        <img
-          src="./map.png"
-          alt="Roman Empire Map"
-          className="w-full h-full object-cover pointer-events-none"
-        />
+        <Tilt
+          options={{
+            max: 25,
+            scale: 1.05,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.5,
+          }}
+          className="absolute inset-0">
+          <img
+            src="./map.png"
+            alt="Roman Empire Map"
+            className="w-full h-full object-cover pointer-events-none"
+          />
 
-        {/* Red Dots and Labels */}
-        {regions.map((region, index) => (
-          <div
-            key={index}
-            className="absolute flex flex-col items-center group"
-            style={{
-              top: region.y - 10,
-              left: region.x - 10,
-              pointerEvents: 'none', // Allows clicks to pass through
-            }}
-          >
-            <div className="w-4 h-4 bg-red-500 rounded-full border-2 border-white transform transition-transform duration-200 group-hover:scale-125" />
-            <span className="text-xs text-white bg-black bg-opacity-70 px-1 mt-1 rounded">
-              {region.name}
-            </span>
-          </div>
-        ))}
-      </div>
+          {/* Red Dots and Labels */}
+          {regions.map((region, index) => (
+            <div
+              key={index}
+              className="absolute flex flex-col items-center group"
+              style={{
+                top: region.y - 10,
+                left: region.x - 10,
+                pointerEvents: 'none', // Allows clicks to pass through
+              }}
+            >
+              <div className="w-4 h-4 bg-red-500 rounded-full border-2 border-white transform transition-transform duration-200 group-hover:scale-125" />
+              <span className="text-xs text-white bg-black bg-opacity-70 px-1 mt-1 rounded">
+                {region.name}
+              </span>
+            </div>
+          ))}
+        </Tilt>
+      </motion.div>
 
       {/* Selected Region Info */}
       <div className="mt-6 text-lg font-medium text-white text-center max-w-xl">

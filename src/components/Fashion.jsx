@@ -2,7 +2,7 @@ import React, { useRef, useState, Suspense } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { PerspectiveCamera, useGLTF } from '@react-three/drei';
 import { SectionWrapper } from '../hoc';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { styles } from '../styles';
 import { textVariant } from '../utils/motion';
 import { fashion } from '../constants';
@@ -63,6 +63,9 @@ const Fashion = () => {
   const next = () => setCurrent((prev) => (prev + 1) % itemCount);
   const prev = () => setCurrent((prev) => (prev - 1 + itemCount) % itemCount);
 
+  const infoRef = useRef(null);
+  const isInView = useInView(infoRef, { once: false, threshold: 0.2 });
+
   return (
     <>
       <motion.div
@@ -102,11 +105,30 @@ const Fashion = () => {
           >
             ›
           </button>
-          <div className="absolute bottom-10 left-[20%] bg-white/80 text-black p-4 rounded-lg max-w-sm shadow-lg pointer-events-auto h-[30%] w-[16%]">
-            <h3 className="text-lg font-semibold mb-1">{fashion[current].title}</h3>
-            <p className="text-sm">Who Wore It : {fashion[current].who}</p><br></br>
-            <p className="text-sm">Description : {fashion[current].description}</p>
-          </div>
+          <motion.div
+            ref={infoRef}
+            initial={{ x: -300, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.2 }}  // 👈 controls how much of the div needs to show
+            transition={{ duration: 1.2, ease: 'easeOut' }}
+            className="absolute bottom-10 left-[15%] bg-white/80 text-black p-4 rounded-lg max-w-sm shadow-lg pointer-events-auto h-[74%] w-[21%]"
+          >
+            {/* Inner motion.div (text content animation on change) */}
+            <motion.div
+              key={fashion[current].id} // re-renders on each index change
+              initial={{ x: 100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: -100, opacity: 0 }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
+            >
+              <h3 className="text-lg font-semibold mb-1">{fashion[current].title}</h3>
+              <p className="text-sm">Who Wore It : {fashion[current].who}</p><br />
+              <p className="text-sm">Description : {fashion[current].description}</p><br />
+              <p className="text-sm">Fabrics : {fashion[current].fabric}</p><br />
+              <p className="text-sm">Significance & Use : {fashion[current].use}</p><br />
+              <p className="text-sm">Societal Status : {fashion[current].status}</p>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </>

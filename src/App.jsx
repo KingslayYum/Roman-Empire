@@ -1,5 +1,5 @@
 import { BrowserRouter } from 'react-router-dom';
-import { About, Art, Architecture, Blog, Contact, Exhibition, Fashion, ImageMap, Hero, History, Influence, Power, Navbar } from './components';
+import { About, Art, Architecture, Blog, Contact, Exhibition, Fashion, ImageMap, Hero, History, Influence, Power, Navbar} from './components';
 import { StatueCanvas } from "./components/canvas";
 
 const App = () => {
@@ -20,9 +20,15 @@ const App = () => {
         </div>
 
         <div className="relative z-10 bg-primary">
-          <Influence />
+          <div className='relative z-0 bg-black/25'>
+            <img src="./pillar.png" alt="Roman Empire" className="absolute w-full h-full object-cover opacity-20" />
+            <Influence />
+          </div>
           <History />
-          <ImageMap />
+          <div className='relative z-0 bg-black/40'>
+            <img src="./background.png" alt="Roman Empire" className="absolute w-full h-full object-cover opacity-20" />
+            <ImageMap />
+          </div>
           <Fashion />
           <Exhibition />
           <div className='relative z-0 bg-primary'>
