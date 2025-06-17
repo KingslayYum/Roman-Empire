@@ -38,7 +38,14 @@ const ColosseumCanvas = () => {
         <ambientLight intensity={0.5} />
         <directionalLight
           position={[-5, 10, 5]}
-          intensity={3}
+          intensity={1.5update}
+          castShadow
+          shadow-mapSize-width={1024}
+          shadow-mapSize-height={1024}
+        />
+        <directionalLight
+          position={[5, 10, 5]}
+          intensity={2}
           castShadow
           shadow-mapSize-width={1024}
           shadow-mapSize-height={1024}
@@ -58,8 +65,8 @@ const ColosseumCanvas = () => {
         {/* HTML Form inside the 3D scene */}
         <Html
         transform
-        position={[0, 2, -0.5]}
-        distanceFactor={4}
+        position={[0, 1.6, -0.5]}
+        distanceFactor={3.5}
         occlude
         center
         >
