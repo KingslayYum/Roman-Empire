@@ -69,10 +69,11 @@ const ExperienceCard = ({ experience, position = 'left' }) => {
               transition={{ type: 'spring', stiffness: 100, damping: 20 }}
               className="absolute top-0 rounded-lg shadow-lg object-cover bg-red-500"
               style={{
-                width: "500px",
-                [isLeft ? 'left' : 'right']: `%`, // stick to card edge
-                marginLeft: isLeft ? '20px' : undefined,
-                marginRight: !isLeft ? '20px' : undefined,
+                height: 'min(40vw, 200px)',
+                top: 0,
+                [isLeft ? 'left' : 'right']: 'calc(60%)',
+                maxWidth: '90vw',
+                zIndex: 20,
               }}
             />
           )}
@@ -97,7 +98,11 @@ const History = () => {
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
           {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience}/>
+            <ExperienceCard 
+              key={index} 
+              experience={experience} 
+              position={index % 2 === 0 ? 'left' : 'right'} 
+            />
           ))}
         </VerticalTimeline>
       </div>
