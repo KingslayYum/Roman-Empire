@@ -8,3 +8,6 @@ In the terminal of VSCode, Enter:
 ```cmd
 npm run dev
 ```
+
+## Demo Video
+https://drive.google.com/drive/folders/1qg1uQcChowmsHM36_1hsEoOAc2JGZUMx?usp=sharing
